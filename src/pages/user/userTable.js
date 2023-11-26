@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Layout } from "../../components/components";
 
-const userTable = () => {
+const UserTable = () => {
   return (
-    <div>
-      <h1>userTable</h1>
-    </div>
-  )
-}
+    <Layout selected={"2"}>
+      <div>
+        <h1>userTable</h1>
+      </div>
+    </Layout>
+  );
+};
 
-export default userTable
+export default UserTable;

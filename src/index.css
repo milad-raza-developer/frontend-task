@@ -21,10 +21,23 @@ body {
   font-family: NotoRegular, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #E1E1E1;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.ant-layout-sider-children{
+  @apply !py-6
+}
+
+.ant-menu-item{
+  @apply !my-3
+}
+
+.ant-menu-item-selected{
+  @apply !bg-primary !text-white
 }
 

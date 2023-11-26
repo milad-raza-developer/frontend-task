@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { UserForm, userTable } from "../pages/pages";
+import { UserForm, UserTable } from "../pages/pages";
 import { Result } from "antd";
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -16,7 +16,7 @@ function AppRouter() {
       <ScrollToTop />
       <Routes>
         <Route exact path="/" element={<UserForm />} />
-        <Route exact path="/user-table" element={<userTable />} />
+        <Route exact path="/user-table" element={<UserTable />} />
         <Route
           exact
           path="*"

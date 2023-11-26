@@ -1,4 +1,4 @@
 import UserForm from "./user/userForm";
-import userTable from "./user/userTable";
+import UserTable from "./user/userTable";
 
-export {UserForm, userTable};
+export {UserForm, UserTable};
