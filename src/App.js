@@ -1,8 +1,19 @@
+import { ConfigProvider } from "antd";
+import AppRouter from "./config/router";
+import NotoSans from "./assets/fonts/NotoSans-Regular.ttf";
+
 function App() {
   return (
-   <div>
-    <h1 className="text-red-600 font-bold px-4">home</h1>
-    </div>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: "#7A5CFA",
+            fontFamily: NotoSans,
+          },
+        }}
+      >
+        <AppRouter />
+      </ConfigProvider>
   );
 }
 
