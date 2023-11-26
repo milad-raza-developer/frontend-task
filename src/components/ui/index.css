@@ -1,0 +1,50 @@
+.ant-select {
+  height: 2.75rem !important;
+}
+
+.selectBox div {
+  height: 2.75rem !important;
+}
+
+.selectBox div span {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.selectBox div span input {
+  height: 2.75rem !important;
+}
+
+.ant-select-dropdown {
+  @apply !p-0;
+}
+
+.ant-select-item-option {
+  @apply !rounded-none border-b border-b-gray-200 !py-3;
+}
+
+.ant-select-item-option-selected {
+  @apply !bg-primary !text-white;
+}
+
+.ant-upload-drag {
+  @apply !border !border-dashed !rounded-md !p-4 md:!w-48 !w-full !bg-[#FDFDFD] border-[#cccccc];
+}
+
+.ant-table-wrapper .ant-table-thead > tr > td,
+.ant-table-wrapper .ant-table-thead > tr > th {
+  background-color: transparent !important;
+  color: #566a7f !important;
+  font-size: 12px;
+  border: none !important;
+}
+
+.ant-table-tbody tr:nth-child(odd) {
+  background-color: #f7f7f7 !important;
+}
+
+.ant-table-tbody > tr > td {
+  font-size: 12px;
+  border: none !important;
+  color: #798899 !important;
+}

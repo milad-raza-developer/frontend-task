@@ -19,7 +19,7 @@ const Sidebar = ({ collapsed, setCollapsed, selected }) => {
       trigger={null}
       collapsible
       collapsed={collapsed}
-      className="bg-white rounded-tr-md rounded-br-md h-[92vh]"
+      className="bg-white rounded-tr-md rounded-br-md h-[92vh] fixed top-5 z-50"
     >
         <div className="w-full px-4">
     <img src={menu_icon} alt="menu" className="cursor-pointer" onClick={() => setCollapsed(!collapsed)} />

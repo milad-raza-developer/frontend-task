@@ -41,3 +41,17 @@ code {
   @apply !bg-primary !text-white
 }
 
+.ant-switch-inner{
+  @apply border border-[#CCCCCC]
+}
+
+.ant-switch-handle{
+  width: 16px !important;
+  height: 16px !important;
+  top: 3px !important;
+  margin-left: 2px !important;
+}
+
+:where(.css-dev-only-do-not-override-dumdz8).ant-switch .ant-switch-handle::before{
+  @apply !bg-[#F4F4F4] border border-[#CCCCCC]
+}
