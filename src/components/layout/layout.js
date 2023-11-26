@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "./sidebar";
 import { menu_icon } from "../../assets/icons/icons";
+import MenuDrawer from "./menuDrawer";
 
 const Layout = ({ children, selected }) => {
   const [Collapse, setCollapsed] = useState(false);
@@ -22,10 +23,15 @@ const Layout = ({ children, selected }) => {
           src={menu_icon}
           alt="menu"
           className="cursor-pointer mb-4 mt-2 ml-2 w-6 md:hidden flex"
-          // onClick={() => setCollapsed(!collapsed)}
+          onClick={() => setCollapsed(true)}
         />
         {children}
       </div>
+      <MenuDrawer
+        open={Collapse}
+        onClose={() => setCollapsed(false)}
+        selected={selected}
+      />
     </div>
   );
 };

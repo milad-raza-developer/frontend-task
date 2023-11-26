@@ -1,45 +1,33 @@
-// Sidebar.js
 import React from "react";
-import { Layout, Menu } from "antd";
+import { Drawer, Menu } from "antd";
 import { useNavigate } from "react-router-dom";
-import { menu_icon } from "../../assets/icons/icons";
+import {CloseOutlined} from  "@ant-design/icons"
 
-const { Sider } = Layout;
-
-const Sidebar = ({ collapsed, setCollapsed, selected }) => {
+const MenuDrawer = ({ selected, open, onClose }) => {
   const navigate = useNavigate();
 
   const onHandleRoute = (key) => {
     key == 1 && navigate("/");
     key == 2 && navigate("/user-table");
   };
-
   return (
-    <Sider
-      trigger={null}
-      collapsible
-      collapsed={collapsed}
-      className="bg-white rounded-tr-md rounded-br-md h-[92vh] fixed top-5 z-50"
+    <Drawer
+      placement="left"
+      open={open}
+      className={"bg-white rounded-tr-md rounded-br-md p-0 sidemenu-drawer"}
+      width={200}
+      closable={false}
     >
-      <div
-        className={`w-full px-4 flex ${
-          collapsed ? "justify-center" : "justify-start"
-        }`}
-      >
-        <img
-          src={menu_icon}
-          alt="menu"
-          className="cursor-pointer"
-          onClick={() => setCollapsed(!collapsed)}
-        />
-      </div>
-
+        <div className="flex justify-end  p-4 pb-0">
+        <CloseOutlined  className="text-lg cursor-pointer" onClick={onClose}/>
+        </div>
       <Menu
         mode="inline"
         defaultSelectedKeys={[selected]}
-        className="bg-white mt-4"
+        className="bg-white mt-4 w-full"
       >
         <Menu.Item
+        className={`${selected == 1 && "ant-menu-item-selected"} ant-menu-item`}
           key="1"
           icon={
             <svg
@@ -76,8 +64,8 @@ const Sidebar = ({ collapsed, setCollapsed, selected }) => {
           User Table
         </Menu.Item>
       </Menu>
-    </Sider>
+    </Drawer>
   );
 };
 
-export default Sidebar;
+export default MenuDrawer;

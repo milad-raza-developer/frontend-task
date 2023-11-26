@@ -33,6 +33,10 @@ code {
   background-color: #fff !important;
 }
 
+.sidemenu-drawer .ant-drawer-body{
+  padding: 0 !important;
+}
+
 .ant-layout-sider-children{
   @apply !py-6
 }
