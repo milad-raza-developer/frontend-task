@@ -5,6 +5,7 @@ import MenuDrawer from "./menuDrawer";
 
 const Layout = ({ children, selected }) => {
   const [Collapse, setCollapsed] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex py-6">
       <div className="md:flex hidden">
@@ -23,15 +24,17 @@ const Layout = ({ children, selected }) => {
           src={menu_icon}
           alt="menu"
           className="cursor-pointer mb-4 mt-2 ml-2 w-6 md:hidden flex"
-          onClick={() => setCollapsed(true)}
+          onClick={() => setIsOpen(true)}
         />
         {children}
       </div>
+      <div className="md:hidden flex">
       <MenuDrawer
-        open={Collapse}
-        onClose={() => setCollapsed(false)}
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
         selected={selected}
       />
+      </div>
     </div>
   );
 };
