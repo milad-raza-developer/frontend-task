@@ -29,6 +29,10 @@ code {
     monospace;
 }
 
+.white-loader .ant-spin-dot-item {
+  background-color: #fff !important;
+}
+
 .ant-layout-sider-children{
   @apply !py-6
 }
