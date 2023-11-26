@@ -33,6 +33,7 @@ const UserForm = () => {
           phoneNumber: values.phoneNumber,
           interviewTime: values.interviewTime || "Morning",
           role: isRole ? values.role : null,
+          active: false
         };
 
         const docRef = await addDoc(usersCollection, userData);
